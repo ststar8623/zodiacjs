@@ -68,7 +68,6 @@ function horoscope(){
 		if(sign === zodiac[i].sign){
 			document.getElementById("yourSign").innerHTML = zodiac[i].sign.toUpperCase()
 			document.getElementById("icon").src = zodiac[i].image
-			document.getElementById("yourHoroscope").innerHTML = "You're best attributes are: " + zodiac[i].fortune
 			return
 		} else {
 			document.getElementById("yourSign").innerHTML = "That's not one of the signs. Try again!"
@@ -76,4 +75,16 @@ function horoscope(){
 			document.getElementById("yourHoroscope").innerHTML = ""
 		}
 	}
-};
+}
+
+document.getElementById("icon").onmouseover = function() {mouseOver()};
+document.getElementById("icon").onmouseout = function() {mouseOut()};
+
+function mouseOver(){
+	document.getElementById("yourSign").innerHTML = "You're best attributes are: " + zodiac[i].fortune
+	
+}
+function mouseOut(){
+	document.getElementById("yourSign").innerHTML = "Try another one!"
+	document.getElementById("icon").src = ""
+}

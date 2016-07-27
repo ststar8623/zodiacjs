@@ -12,18 +12,32 @@ h1, h3 {
 	background-image: url("../img/univers.jpeg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	height: 880px;
+	height: 800px;
 	width: 100%;
 }
 
-#yourHoroscope {
-	font-size: 20px;
-	padding: 15px;
-	text-shadow: 3px 3px 3px #ff1111;
+#yourSign, #allSign label {
+	font-size: 14px;
+	color: #aaaaaa;
+	-webkit-animation: mymove 3s infinite;
+	animation: mymove 3s infinite;
+}
+
+#allSign label {
+	font-size: 12px;
+}
+
+@-webkit-keyframes mymove {
+	50% {text-shadow: 10px 10px 10px #ff0000;}
+}
+@keyframes mymove {
+	50% {text-shadow: 10px 10px 10px #ff0000;}
 }
 
 #icon {
 	margin: 0 auto;
+	box-shadow: 15px 15px 15px black;
+	border-radius: 25px 50px;
 }
 
 .fadeIn {
