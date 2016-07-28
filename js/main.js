@@ -70,20 +70,24 @@ function horoscope(){
 			document.getElementById("icon").src = zodiac[i].image
 			return
 		} else {
-			document.getElementById("yourSign").innerHTML = "That's not one of the signs. Try again!"
+			document.getElementById("yourSign").innerHTML = sign + " is not one of the signs. Try again!"
 			document.getElementById("icon").src = ""
 			document.getElementById("yourHoroscope").innerHTML = ""
 		}
 	}
 }
 
+// set functions for id="icon"
 document.getElementById("icon").onmouseover = function() {mouseOver()};
 document.getElementById("icon").onmouseout = function() {mouseOut()};
 
+// fortune display when mouse move over on the zodiac picture
 function mouseOver(){
 	document.getElementById("yourSign").innerHTML = "You're best attributes are: " + zodiac[i].fortune
 	
 }
+
+// zodiac picture and fortune disappear when mouse move out from the picture
 function mouseOut(){
 	document.getElementById("yourSign").innerHTML = "Try another one!"
 	document.getElementById("icon").src = ""
